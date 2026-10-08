@@ -64,18 +64,6 @@ export default function Services({ onSelectServiceForBooking }) {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                
-                {/* Category Chip & Badge */}
-                <div className="absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 flex flex-wrap gap-1.5">
-                  <span className="bg-[#08212D]/85 backdrop-blur-md px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[9px] sm:text-xs font-semibold text-[#F3E5AB] border border-[#D4AF37]/30 shadow-xs">
-                    {service.category}
-                  </span>
-                  {service.badge && (
-                    <span className="bg-[#175C76] text-[#F3E5AB] px-2 sm:px-2.5 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold tracking-wide uppercase shadow-xs border border-[#D4AF37]/30">
-                      {service.badge}
-                    </span>
-                  )}
-                </div>
 
                 {/* View Details Badge */}
                 <div className="absolute bottom-2.5 right-2.5 sm:bottom-3.5 sm:right-3.5 bg-white/90 group-hover:bg-white text-[#08212D] text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm shadow-md flex items-center gap-1 transition-all">
@@ -126,18 +114,6 @@ export default function Services({ onSelectServiceForBooking }) {
                   alt={selectedService.title}
                   className="max-h-[280px] md:max-h-[440px] w-full object-cover rounded-2xl shadow-lg"
                 />
-                
-                {/* Badges */}
-                <div className="absolute top-4 left-4 flex flex-wrap gap-2">
-                  <span className="px-3 py-1 rounded-full bg-[#08212D]/90 text-[#F3E5AB] text-xs font-bold border border-[#D4AF37]/50 backdrop-blur-sm shadow-sm">
-                    {selectedService.category}
-                  </span>
-                  {selectedService.badge && (
-                    <span className="px-3 py-1 rounded-full bg-[#175C76] text-[#F3E5AB] text-xs font-bold tracking-wide uppercase border border-[#D4AF37]/40 shadow-sm">
-                      {selectedService.badge}
-                    </span>
-                  )}
-                </div>
 
                 <div className="absolute bottom-4 left-4 flex items-center gap-2 bg-[#08212D]/85 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-medium border border-white/10">
                   <Clock className="w-3.5 h-3.5 text-[#F3E5AB]" />
