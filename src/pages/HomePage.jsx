@@ -16,7 +16,7 @@ export default function HomePage({ onOpenBooking }) {
     <div className="bg-[#F9F7F1] text-[#1A2830]">
       
       {/* 1. Hero Section in Peacock Blue, Beige, and Golden Theme with Fullscreen Desktop Height */}
-      <section className="relative min-h-screen flex flex-col justify-center items-center pt-36 pb-16 sm:pt-40 sm:pb-20 md:pt-48 md:pb-24 overflow-hidden bg-[#08212D]">
+      <section className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-center items-center pt-28 pb-12 sm:pt-36 sm:pb-16 md:pt-48 md:pb-24 overflow-hidden bg-[#08212D]">
         {/* Background Video Layer with crisp visibility and balanced luxury contrast */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video
@@ -25,13 +25,10 @@ export default function HomePage({ onOpenBooking }) {
             loop
             playsInline
             poster="/videoframe_6224.png"
-            className="h-full w-full object-cover opacity-100"
-            style={{ objectPosition: 'center' }}
+            className="h-full w-full object-cover object-[center_20%] sm:object-center opacity-100"
           >
             <source src="/gemini_generated_video_63ca73c6.mp4" type="video/mp4" />
-            <source src={encodeURI('/From Klickpin.com- Fresh leadership reflections with charm and ideas this season for modern conversation starters-pin-id-595530750772312342.mp4')} type="video/mp4" />
             <source src="/hero-bg-video.mp4" type="video/mp4" />
-            <source src={encodeURI('/From Klickpin.com- Get inspired by Modern DIY wall art projects for your next Pinterest save with enough variety to inspire your next creative ste.mp4')} type="video/mp4" />
           </video>
           {/* Subtle cinematic gradient overlay to ensure video is vibrant while text is 100% readable */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#08212D]/35 via-[#08212D]/20 to-[#08212D]/45" />

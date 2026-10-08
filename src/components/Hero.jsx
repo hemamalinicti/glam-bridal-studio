@@ -4,7 +4,7 @@ import { studioInfo } from '../data/studioInfo';
 
 export default function Hero({ onOpenBooking, onExplorePackages }) {
   return (
-    <section id="home" className="relative pt-36 pb-20 sm:pt-40 md:pt-48 md:pb-28 overflow-hidden bg-[#08212D]">
+    <section id="home" className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-center items-center pt-28 pb-12 sm:pt-36 sm:pb-16 md:pt-48 md:pb-24 overflow-hidden bg-[#08212D]">
       {/* Background Video Layer with crisp visibility and balanced luxury contrast */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
@@ -13,10 +13,10 @@ export default function Hero({ onOpenBooking, onExplorePackages }) {
           loop
           playsInline
           poster="/videoframe_6224.png"
-          className="h-full w-full object-cover opacity-95 scale-100"
+          className="h-full w-full object-cover object-[center_20%] sm:object-center opacity-95 scale-100"
         >
+          <source src="/gemini_generated_video_63ca73c6.mp4" type="video/mp4" />
           <source src="/hero-bg-video.mp4" type="video/mp4" />
-          <source src={encodeURI('/From Klickpin.com- Get inspired by Modern DIY wall art projects for your next Pinterest save with enough variety to inspire your next creative ste.mp4')} type="video/mp4" />
         </video>
         {/* Subtle luminous gradient overlay: bright vivid background with crisp text legibility */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#08212D]/50 via-[#08212D]/25 to-[#08212D]/65" />
