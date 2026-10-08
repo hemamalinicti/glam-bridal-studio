@@ -17,22 +17,37 @@ export default function HomePage({ onOpenBooking }) {
       
       {/* 1. Hero Section in Peacock Blue, Beige, and Golden Theme with Fullscreen Desktop Height */}
       <section className="relative min-h-[92vh] sm:min-h-screen flex flex-col justify-center items-center pt-28 pb-12 sm:pt-36 sm:pb-16 md:pt-48 md:pb-24 overflow-hidden bg-[#08212D]">
-        {/* Background Video Layer with crisp visibility and balanced luxury contrast */}
-        <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* Background Video Layer with crisp visibility and zoomed-out mobile view */}
+        <div className="absolute inset-0 z-0 overflow-hidden flex items-center justify-center">
+          {/* Ambient Blurred Video Layer for seamless mobile edges */}
+          <div className="absolute inset-0 z-0 scale-125 blur-2xl opacity-50 sm:hidden">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+            >
+              <source src="/gemini_generated_video_63ca73c6.mp4" type="video/mp4" />
+              <source src="/hero-bg-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          {/* Main Hero Video: Zoomed-out (object-contain) on mobile and full cover on desktop */}
           <video
             autoPlay
             muted
             loop
             playsInline
             poster="/videoframe_6224.png"
-            className="h-full w-full object-cover object-[center_20%] sm:object-center opacity-100"
+            className="relative z-10 w-full h-full object-contain sm:object-cover sm:object-center opacity-100"
           >
             <source src="/gemini_generated_video_63ca73c6.mp4" type="video/mp4" />
             <source src="/hero-bg-video.mp4" type="video/mp4" />
           </video>
           {/* Subtle cinematic gradient overlay to ensure video is vibrant while text is 100% readable */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#08212D]/35 via-[#08212D]/20 to-[#08212D]/45" />
-          <div className="absolute inset-0 bg-radial from-transparent via-[#08212D]/10 to-[#08212D]/25" />
+          <div className="absolute inset-0 z-20 bg-gradient-to-b from-[#08212D]/50 via-[#08212D]/25 to-[#08212D]/60" />
+          <div className="absolute inset-0 z-20 bg-radial from-transparent via-[#08212D]/10 to-[#08212D]/35" />
         </div>
 
         {/* Decorative Golden & Peacock Glow Highlights */}
