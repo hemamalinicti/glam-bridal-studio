@@ -43,108 +43,111 @@ export default function PackagesPage() {
       </section>
 
       {/* Packages Grid */}
-      <section className="py-16">
+      <section className="py-12 sm:py-16">
         <div className="max-w-[1520px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 items-stretch mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6 items-stretch mb-12 sm:mb-16">
             {packagesData.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 text-left ${
+                className={`relative rounded-2xl sm:rounded-3xl p-3.5 sm:p-7 flex flex-col justify-between transition-all duration-300 text-left ${
                   pkg.isPopular
-                    ? 'bg-[#08212D] text-[#FAF7F1] shadow-2xl scale-100 lg:-translate-y-2 border-2 border-[#D4AF37]'
-                    : 'bg-white text-[#08212D] border border-[#E4DAC6] shadow-md hover:shadow-xl'
+                    ? 'bg-[#08212D] text-[#FAF7F1] shadow-xl scale-100 lg:-translate-y-2 border-2 border-[#D4AF37]'
+                    : 'bg-white text-[#08212D] border border-[#E4DAC6] shadow-sm hover:shadow-xl'
                 }`}
               >
                 {pkg.badge && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C59F54] text-[#08212D] text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md flex items-center gap-1.5 whitespace-nowrap border border-[#B8860B]/30">
-                    <Star className="w-3 h-3 fill-current text-[#08212D]" />
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C59F54] text-[#08212D] text-[9px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 sm:px-4 py-0.5 sm:py-1 rounded-full shadow-md flex items-center gap-1 whitespace-nowrap border border-[#B8860B]/30">
+                    <Star className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current text-[#08212D]" />
                     <span>{pkg.badge}</span>
                   </div>
                 )}
 
                 <div>
-                  <div className={`inline-block text-[11px] font-semibold px-2.5 py-0.5 rounded-md mb-2 ${pkg.isPopular ? 'bg-[#11465D] text-[#F3E5AB] border border-[#D4AF37]/30' : 'bg-[#EFE9DC] text-[#0E384A] border border-[#E4DAC6]'}`}>
+                  <div className={`inline-block text-[9px] sm:text-[11px] font-semibold px-2 py-0.5 rounded-md mb-1.5 sm:mb-2 ${pkg.isPopular ? 'bg-[#11465D] text-[#F3E5AB] border border-[#D4AF37]/30' : 'bg-[#EFE9DC] text-[#0E384A] border border-[#E4DAC6]'}`}>
                     {pkg.idealFor}
                   </div>
-                  <h3 className={`font-serif text-xl sm:text-2xl font-bold ${pkg.isPopular ? 'text-[#F3E5AB]' : 'text-[#08212D]'}`}>
+                  <h3 className={`font-serif text-sm sm:text-2xl font-bold leading-snug ${pkg.isPopular ? 'text-[#F3E5AB]' : 'text-[#08212D]'}`}>
                     {pkg.name}
                   </h3>
-                  <p className={`text-xs mt-1 leading-relaxed ${pkg.isPopular ? 'text-[#B8CAD1]' : 'text-[#596E78]'}`}>
+                  <p className={`text-[10px] sm:text-xs mt-1 leading-relaxed ${pkg.isPopular ? 'text-[#B8CAD1]' : 'text-[#596E78]'}`}>
                     {pkg.tagline}
                   </p>
 
-                  <div className="my-5 pb-5 border-b border-white/10">
-                    <div className="flex items-baseline gap-2">
-                      <span className={`font-serif text-3xl sm:text-4xl font-bold ${pkg.isPopular ? 'text-white' : 'text-[#0E384A]'}`}>
+                  <div className="my-3 sm:my-5 pb-3 sm:pb-5 border-b border-white/10">
+                    <div className="flex items-baseline gap-1.5 sm:gap-2 flex-wrap">
+                      <span className={`font-serif text-lg sm:text-3xl md:text-4xl font-bold ${pkg.isPopular ? 'text-white' : 'text-[#0E384A]'}`}>
                         {pkg.price}
                       </span>
-                      <span className="text-xs text-gray-400 line-through">{pkg.originalPrice}</span>
+                      <span className="text-[10px] sm:text-xs text-gray-400 line-through">{pkg.originalPrice}</span>
                     </div>
-                    <span className="inline-block text-[11px] font-semibold text-[#25D366] mt-0.5">{pkg.discount}</span>
+                    <span className="inline-block text-[9px] sm:text-[11px] font-semibold text-[#25D366] mt-0.5">{pkg.discount}</span>
                   </div>
 
-                  <div className="space-y-2.5 text-xs mb-8">
-                    <p className={`text-[11px] font-bold uppercase tracking-wider mb-2 ${pkg.isPopular ? 'text-[#D4AF37]' : 'text-[#0E384A]'}`}>
+                  <div className="space-y-1.5 sm:space-y-2.5 text-[10px] sm:text-xs mb-4 sm:mb-8">
+                    <p className={`text-[9px] sm:text-[11px] font-bold uppercase tracking-wider mb-1.5 ${pkg.isPopular ? 'text-[#D4AF37]' : 'text-[#0E384A]'}`}>
                       Package Inclusions:
                     </p>
                     {pkg.inclusions.map((inc, i) => (
-                      <div key={i} className="flex items-start gap-2">
-                        <div className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${pkg.isPopular ? 'bg-[#175C76] text-[#F3E5AB]' : 'bg-[#EFE9DC] text-[#175C76]'}`}>
-                          <Check className="w-2.5 h-2.5" />
+                      <div key={i} className="flex items-start gap-1.5 sm:gap-2">
+                        <div className={`w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${pkg.isPopular ? 'bg-[#175C76] text-[#F3E5AB]' : 'bg-[#EFE9DC] text-[#175C76]'}`}>
+                          <Check className="w-2 h-2 sm:w-2.5 sm:h-2.5" />
                         </div>
-                        <span className={pkg.isPopular ? 'text-[#D4E1E6]' : 'text-[#3D4D55]'}>{inc}</span>
+                        <span className={`line-clamp-2 ${pkg.isPopular ? 'text-[#D4E1E6]' : 'text-[#3D4D55]'}`}>{inc}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="space-y-2 pt-2">
+                <div className="space-y-1.5 sm:space-y-2 pt-2">
                   <Link
                     to="/appointment"
-                    className={`w-full py-3 px-4 rounded-xl font-medium text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-2 ${
+                    className={`w-full py-2 sm:py-3 px-2 sm:px-4 rounded-xl font-medium text-[10px] sm:text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-1.5 sm:gap-2 text-center ${
                       pkg.isPopular
-                        ? 'bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C59F54] text-[#08212D] font-bold shadow-lg'
+                        ? 'bg-gradient-to-r from-[#D4AF37] via-[#F3E5AB] to-[#C59F54] text-[#08212D] font-bold shadow-md'
                         : 'bg-[#08212D] hover:bg-[#0E384A] text-[#F3E5AB] border border-[#D4AF37]/30'
                     }`}
                   >
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>Book This Package</span>
+                    <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
+                    <span>Book Package</span>
                   </Link>
 
                   <a
                     href={`https://wa.me/${studioInfo.whatsapp}?text=Hi%20Glam%20Bridal%20Studio,%20I%20would%20like%20to%20know%20more%20and%20book%20the%20${encodeURIComponent(pkg.name)}%20(${pkg.price})`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-full py-2 px-4 rounded-xl font-medium text-xs flex items-center justify-center gap-2 transition-colors ${
+                    className={`w-full py-1.5 sm:py-2 px-2 sm:px-4 rounded-xl font-medium text-[10px] sm:text-xs flex items-center justify-center gap-1.5 sm:gap-2 transition-colors text-center ${
                       pkg.isPopular ? 'bg-white/10 text-[#25D366]' : 'bg-[#25D366]/10 text-[#1E7E34]'
                     }`}
                   >
-                    <MessageCircle className="w-4 h-4 fill-current" />
-                    <span>WhatsApp Enquire</span>
+                    <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4 fill-current shrink-0" />
+                    <span>WhatsApp</span>
                   </a>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Add-on Services Box */}
-          <div className="bg-white rounded-3xl p-8 border border-[#E4DAC6] shadow-sm text-left mb-16">
-            <h3 className="font-serif text-2xl font-bold text-[#08212D] mb-2">
+          {/* Add-on Services Box - 2 Columns on Mobile */}
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-[#E4DAC6] shadow-sm text-left mb-12 sm:mb-16">
+            <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#08212D] mb-1 sm:mb-2">
               Optional Bridal Add-on Enhancements
             </h3>
-            <p className="text-xs text-[#596E78] mb-6">
+            <p className="text-[11px] sm:text-xs text-[#596E78] mb-4 sm:mb-6">
               Customize any bridal package with these popular ala-carte services.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-4">
               {addOns.map((item, idx) => (
-                <div key={idx} className="p-4 rounded-2xl bg-[#F7F4EC] border border-[#E4DAC6] flex items-start justify-between gap-4">
+                <div key={idx} className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-[#F7F4EC] border border-[#E4DAC6] flex flex-col justify-between text-left">
                   <div>
-                    <h4 className="font-bold text-sm text-[#08212D]">{item.title}</h4>
-                    <p className="text-xs text-[#596E78] mt-0.5">{item.desc}</p>
+                    <h4 className="font-bold text-xs sm:text-sm text-[#08212D] leading-snug">{item.title}</h4>
+                    <p className="text-[10px] sm:text-xs text-[#596E78] mt-1 leading-relaxed">{item.desc}</p>
                   </div>
-                  <span className="font-serif text-sm font-bold text-[#175C76] whitespace-nowrap">{item.price}</span>
+                  <div className="mt-2.5 pt-2 border-t border-[#E4DAC6]/60 flex items-center justify-between">
+                    <span className="text-[9px] sm:text-xs text-[#596E78] font-medium">Rate:</span>
+                    <span className="font-serif text-xs sm:text-sm font-bold text-[#175C76]">{item.price}</span>
+                  </div>
                 </div>
               ))}
             </div>
