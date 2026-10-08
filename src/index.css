@@ -141,3 +141,93 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #D4AF37;
 }
+
+/* Auto Movement Animations for Highlights Section Icons */
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.05);
+  }
+}
+
+@keyframes iconPulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.55), 0 0 12px rgba(243, 229, 171, 0.4);
+  }
+}
+
+@keyframes gentleSway {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-8deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(8deg) scale(1.05);
+  }
+}
+
+@keyframes heartBeatSlow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shieldShimmer {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.08) translateY(-2px);
+  }
+}
+
+.animate-icon-float-1 {
+  animation: iconFloat 3.2s ease-in-out infinite, iconPulseGlow 3.2s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.animate-icon-float-2 {
+  animation: iconFloat 3.2s ease-in-out infinite, iconPulseGlow 3.2s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+.animate-icon-float-3 {
+  animation: iconFloat 3.2s ease-in-out infinite, iconPulseGlow 3.2s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+.animate-icon-float-4 {
+  animation: iconFloat 3.2s ease-in-out infinite, iconPulseGlow 3.2s ease-in-out infinite;
+  animation-delay: 2.4s;
+}
+
+.animate-sway {
+  animation: gentleSway 3.5s ease-in-out infinite;
+}
+
+.animate-heartbeat-slow {
+  animation: heartBeatSlow 2.4s ease-in-out infinite;
+}
+
+.animate-shield-shimmer {
+  animation: shieldShimmer 3s ease-in-out infinite;
+}
