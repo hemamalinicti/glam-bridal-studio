@@ -58,39 +58,30 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-[#F9F7F1] text-[#1A2830] pt-28 md:pt-32">
+    <div className="bg-[#F9F7F1] text-[#1A2830]">
       
-      {/* Page Header Banner with Studio Logo and Background Image */}
-      <section className="relative py-20 md:py-24 overflow-hidden bg-[#08212D] text-center border-b border-[#D4AF37]/30">
-        {/* Background Image Layer with luxury gradient overlay so image & letters are clearly visible */}
+      {/* Page Header Banner with Background Image - Unified Standard Height */}
+      <section className="relative h-[360px] sm:h-[380px] md:h-[400px] flex flex-col justify-center items-center pt-24 sm:pt-28 pb-8 overflow-hidden bg-[#08212D] text-center border-b border-[#D4AF37]/30">
+        {/* Background Image Layer with luxury gradient overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src="/hero-banners/about-hero-bg.jpg"
             alt="Glam Bridal Studio Salon Interior"
             className="w-full h-full object-cover object-center scale-105"
           />
-          {/* Luminous balanced overlay: image details clearly visible with crisp text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#08212D]/55 via-[#08212D]/25 to-[#08212D]/65" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#08212D]/60 via-[#08212D]/35 to-[#08212D]/75" />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="w-20 h-20 md:w-24 md:h-24 mx-auto rounded-full p-1 bg-gradient-to-tr from-[#0E384A] via-[#D4AF37] to-[#175C76] shadow-2xl">
-            <img
-              src="/logo.png"
-              alt="Glam Bridal Studio Emblem"
-              className="w-full h-full object-cover rounded-full bg-[#FAF7F0]"
-            />
-          </div>
-          
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#08212D]/85 backdrop-blur-md border border-[#D4AF37]/60 text-xs font-semibold uppercase tracking-wider text-[#F3E5AB] shadow-lg">
+        <div className="relative z-10 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-3 sm:space-y-4 my-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#08212D]/85 backdrop-blur-md border border-[#D4AF37]/60 text-xs font-semibold uppercase tracking-wider text-[#F3E5AB] shadow-lg">
             <Sparkles className="w-3.5 h-3.5 text-[#F3E5AB]" />
             <span>Our Heritage & Artistry</span>
           </div>
 
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">
             About Glam Bridal <span className="italic font-cormorant font-normal text-[#F3E5AB] drop-shadow">Studio</span>
           </h1>
-          <p className="text-[#FAF7F1] text-base sm:text-lg max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-medium">
+          <p className="text-[#FAF7F1] text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-normal sm:font-medium">
             Coimbatore’s premier luxury bridal beauty destination, dedicated to timeless aesthetics, certified expertise, and bridal perfection.
           </p>
         </div>

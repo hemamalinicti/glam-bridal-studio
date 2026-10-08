@@ -53,55 +53,56 @@ export default function AccessoriesPage() {
   };
 
   return (
-    <div className="bg-[#F9F7F1] text-[#1A2830] min-h-screen pt-28 md:pt-32 pb-20">
-      {/* 1. Header Hero Banner with Background Image */}
-      <section className="relative py-16 md:py-20 overflow-hidden bg-[#08212D] text-center border-b border-[#D4AF37]/30">
-        {/* Background Image Layer with balanced gradient overlay */}
+    <div className="bg-[#F9F7F1] text-[#1A2830] min-h-screen">
+      {/* 1. Header Hero Banner with Background Image - Unified Standard Height */}
+      <section className="relative h-[360px] sm:h-[380px] md:h-[400px] flex flex-col justify-center items-center pt-24 sm:pt-28 pb-8 overflow-hidden bg-[#08212D] text-center border-b border-[#D4AF37]/30">
+        {/* Background Image Layer with luxury gradient overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src="/hero-banners/accessories-hero-bg.png"
             alt="Curated Accessories & Jewellery Collection"
             className="w-full h-full object-cover object-center scale-105"
           />
-          {/* Luminous balanced overlay: image details clearly visible with crisp text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#08212D]/55 via-[#08212D]/25 to-[#08212D]/65" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#08212D]/60 via-[#08212D]/35 to-[#08212D]/75" />
         </div>
 
-        <div className="max-w-[1520px] w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#08212D]/85 backdrop-blur-md border border-[#D4AF37]/60 shadow-lg text-xs md:text-sm font-semibold text-[#F3E5AB] uppercase tracking-wider mb-4">
-            <Sparkles className="w-4 h-4 text-[#F3E5AB]" />
+        <div className="relative z-10 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-3 sm:space-y-4 my-auto text-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#08212D]/85 backdrop-blur-md border border-[#D4AF37]/60 text-xs font-semibold uppercase tracking-wider text-[#F3E5AB] shadow-lg">
+            <Sparkles className="w-3.5 h-3.5 text-[#F3E5AB]" />
             <span>Bridal & Bridesmaid Boutique</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight max-w-4xl mx-auto leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">
             Curated <span className="italic font-cormorant font-normal text-[#F3E5AB] drop-shadow">Accessories & Jewellery</span> Collection
           </h1>
 
-          <p className="mt-4 text-sm sm:text-base md:text-lg text-[#FAF7F1] max-w-3xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-medium">
-            Complete your wedding aesthetic with handcrafted temple jewellery sets, poola jada billalu, waist belts, festive bridesmaid sets, and silk potlis. Available for <strong className="text-white">purchase & premium rental</strong> in Coimbatore.
+          <p className="text-[#FAF7F1] text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-normal sm:font-medium">
+            Handcrafted South Indian temple jewellery, poola jada billalu, vaddanams, and bridesmaid accessories for purchase & rental in Coimbatore.
           </p>
-
-          {/* Guarantee Highlights */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-8 pt-6 border-t border-white/20 text-xs sm:text-sm text-[#EDE6D6]">
-            <div className="flex items-center justify-center gap-2 bg-[#08212D]/60 backdrop-blur-md px-3 py-2 rounded-xl border border-white/10">
-              <Crown className="w-4 h-4 text-[#D4AF37] shrink-0" />
-              <span>Authentic Temple Polish</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 bg-[#08212D]/60 backdrop-blur-md px-3 py-2 rounded-xl border border-white/10">
-              <RotateCcw className="w-4 h-4 text-[#F3E5AB] shrink-0" />
-              <span>Affordable Day Rentals</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 bg-[#08212D]/60 backdrop-blur-md px-3 py-2 rounded-xl border border-white/10">
-              <Truck className="w-4 h-4 text-[#4ADE80] shrink-0" />
-              <span>Fast Coimbatore Delivery</span>
-            </div>
-            <div className="flex items-center justify-center gap-2 bg-[#08212D]/60 backdrop-blur-md px-3 py-2 rounded-xl border border-white/10">
-              <ShieldCheck className="w-4 h-4 text-[#D4AF37] shrink-0" />
-              <span>Sanitized & Box Packed</span>
-            </div>
-          </div>
         </div>
       </section>
+
+      {/* Guarantee Highlights Bar */}
+      <div className="bg-[#08212D] border-b border-[#D4AF37]/30 py-3 text-xs text-[#EDE6D6]">
+        <div className="max-w-[1520px] w-full mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div className="flex items-center justify-center gap-1.5">
+            <Crown className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+            <span>Authentic Temple Polish</span>
+          </div>
+          <div className="flex items-center justify-center gap-1.5">
+            <RotateCcw className="w-3.5 h-3.5 text-[#F3E5AB] shrink-0" />
+            <span>Affordable Day Rentals</span>
+          </div>
+          <div className="flex items-center justify-center gap-1.5">
+            <Truck className="w-3.5 h-3.5 text-[#4ADE80] shrink-0" />
+            <span>Fast Coimbatore Delivery</span>
+          </div>
+          <div className="flex items-center justify-center gap-1.5">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#D4AF37] shrink-0" />
+            <span>Sanitized & Box Packed</span>
+          </div>
+        </div>
+      </div>
 
       {/* 2. Filters & Search Section */}
       <section className="py-6 sm:py-8 border-b border-[#E4DAC6] bg-white">

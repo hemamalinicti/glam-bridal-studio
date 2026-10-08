@@ -1,21 +1,26 @@
-﻿import React from 'react';
+import React from 'react';
 import { FileText, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { studioInfo } from '../data/studioInfo';
 
 export default function TermsPage() {
   return (
-    <div className="bg-[#F9F7F1] text-[#1A2830] pt-24 md:pt-28 pb-20">
-      <section className="py-14 md:py-16 bg-gradient-to-b from-[#FAF7F0] to-[#F9F7F1] border-b border-[#E4DAC6] text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFE9DC] border border-[#D4AF37]/40 text-xs font-semibold uppercase tracking-wider text-[#0E384A]">
-            <FileText className="w-3.5 h-3.5 text-[#C59F54]" />
+    <div className="bg-[#F9F7F1] text-[#1A2830] pb-20">
+      {/* Header Banner - Unified Standard Height */}
+      <section className="relative h-[360px] sm:h-[380px] md:h-[400px] flex flex-col justify-center items-center pt-24 sm:pt-28 pb-8 overflow-hidden bg-[#08212D] text-center border-b border-[#D4AF37]/30">
+        {/* Subtle decorative glow */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#08212D] via-[#0E384A]/60 to-[#08212D]" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-3 sm:space-y-4 my-auto">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full bg-[#08212D]/85 backdrop-blur-md border border-[#D4AF37]/60 text-xs font-semibold uppercase tracking-wider text-[#F3E5AB] shadow-lg">
+            <FileText className="w-3.5 h-3.5 text-[#F3E5AB]" />
             <span>Studio Guidelines</span>
           </div>
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#08212D] tracking-tight">
-            Terms & <span className="italic font-cormorant font-normal text-[#175C76]">Conditions</span>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]">
+            Terms & <span className="italic font-cormorant font-normal text-[#F3E5AB] drop-shadow">Conditions</span>
           </h1>
-          <p className="text-[#4B5E67] text-sm sm:text-base max-w-xl mx-auto">
+          <p className="text-[#FAF7F1] text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-normal sm:font-medium">
             Booking terms, cancellation guidelines, and accessory rental policies for Glam Bridal Studio.
           </p>
         </div>
