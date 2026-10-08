@@ -169,6 +169,7 @@ export const packagesData = [
     discount: "Save 18%",
     isPopular: true,
     badge: "Most Popular",
+    image: "/services/hd-southindian-bridal.jpg",
     idealFor: "Muhurtham Ceremony (Bride + 2 Bridesmaids)",
     inclusions: [
       "1 Full HD South Indian Muhurtham Look for Bride",
@@ -188,6 +189,8 @@ export const packagesData = [
     originalPrice: "₹23,000",
     discount: "High Demand",
     isPopular: false,
+    badge: "Evening Glam",
+    image: "/services/glossy-reception-look.jpg",
     idealFor: "Evening Reception, Sangeet or Cocktail Night",
     inclusions: [
       "1 Signature Glossy Reception Look with dewy glass-skin finish",
@@ -206,6 +209,8 @@ export const packagesData = [
     originalPrice: "₹18,000",
     discount: "Best Value",
     isPopular: false,
+    badge: "Value Suite",
+    image: "/services/prepleating-saree.jpg",
     idealFor: "Ring Ceremony, Engagement & Silk Wardrobe Prep",
     inclusions: [
       "1 Full HD Engagement Bridal Makeup & Chic Hairstyle",
@@ -224,6 +229,8 @@ export const packagesData = [
     originalPrice: "₹16,000",
     discount: "All-in-One Glow",
     isPopular: false,
+    badge: "Pamper Suite",
+    image: "/services/glow-facial-bridal.png",
     idealFor: "2 to 3 Days Before Wedding / Pre-Bridal Pampering",
     inclusions: [
       "1 Luxury Glow Facial for Bridal (Oxy-Hydra infusion & 24K gold mask)",

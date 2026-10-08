@@ -43,7 +43,7 @@ export default function App() {
             <Route path="/" element={<HomePage onOpenBooking={handleOpenBooking} />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage onOpenBooking={handleOpenBooking} />} />
-            <Route path="/packages" element={<PackagesPage />} />
+            <Route path="/packages" element={<PackagesPage onOpenBooking={handleOpenBooking} />} />
             <Route path="/accessories" element={<AccessoriesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/appointment" element={<AppointmentPage />} />
