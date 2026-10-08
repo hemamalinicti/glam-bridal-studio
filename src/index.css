@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cinzel', 'Marcellus', Georgia, serif;
+    --font-marcellus: 'Marcellus', 'Cinzel', Georgia, serif;
+    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+    --font-script: 'Alex Brush', cursive;
+    --font-sans: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #F9F7F1;
+    color: #1A2830;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, .font-serif, .font-serif-luxury {
+    font-family: var(--font-serif);
+    letter-spacing: 0.02em;
+  }
+  
+  .font-marcellus {
+    font-family: var(--font-marcellus);
+  }
+
+  .font-cormorant {
+    font-family: var(--font-cormorant);
+    letter-spacing: 0.01em;
+  }
+
+  .font-script {
+    font-family: var(--font-script);
+  }
+}
+
+/* Peacock Blue, Beige & Golden Color Palette Utilities */
+.bg-peacock-dark {
+  background-color: #08212D;
+}
+
+.bg-peacock-royal {
+  background-color: #0E384A;
+}
+
+.bg-peacock-vibrant {
+  background-color: #175C76;
+}
+
+.bg-peacock-gradient {
+  background: linear-gradient(135deg, #0A2937 0%, #11465D 50%, #061B24 100%);
+}
+
+.bg-peacock-blue-gold {
+  background: linear-gradient(135deg, #0E384A 0%, #165672 60%, #C59F54 100%);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5E8C7 50%, #B8860B 100%);
+}
+
+.bg-beige-soft {
+  background-color: #F7F4EC;
+}
+
+.bg-beige-warm {
+  background-color: #EFE9DC;
+}
+
+.text-peacock {
+  color: #0E384A;
+}
+
+.text-peacock-light {
+  color: #1D789B;
+}
+
+.text-gold {
+  color: #C59F54;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #B8860B 0%, #F3E5AB 50%, #996515 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-peacock-gradient {
+  background: linear-gradient(135deg, #0A2A38 0%, #196482 60%, #0D3E52 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+.border-beige {
+  border-color: #E4DAC6;
+}
+
+.border-peacock {
+  border-color: rgba(14, 56, 74, 0.25);
+}
+
+.glass-beige {
+  background: rgba(247, 244, 236, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.glass-dark-peacock {
+  background: rgba(8, 33, 45, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.peacock-shadow {
+  box-shadow: 0 10px 30px -10px rgba(14, 56, 74, 0.25);
+}
+
+.gold-shadow {
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F4EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #0E384A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
